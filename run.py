@@ -1,2 +1,2 @@
 import numpy as np
-import function as f
+import files.function as f
