@@ -1,2 +1,1 @@
-deep-learning
-make python
+make deep-learning by python
