@@ -23,5 +23,7 @@ for i in range(iters_num):
 
     y = network.predict(x_batch)
     print("seikai",np.argmax(t_batch[0,:]),"yosoku",np.argmax(y[0,:]))
-    a=network.accuracy(x_train,t_train)
-    print(a)
+    
+    
+a=network.accuracy(x_train,t_train)
+print(a)
