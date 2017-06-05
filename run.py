@@ -6,7 +6,7 @@ from files import neural
 
 network = neural.Neural(input_size=784,hidden_size=100,output_size=10)
 
-iters_num = 10000
+iters_num = 1000
 train_size = x_train.shape[0]
 batch_size = 100
 learning_rate = 0.1
@@ -17,8 +17,6 @@ for i in range(iters_num):
     t_batch = t_train[batch_mask]
 
     grad = network.gradient(x_batch,t_batch)
-
-    #print(grad)
 
     for key in ('W1','b1','W2','b2'):
         network.params[key] -= learning_rate * grad[key]
