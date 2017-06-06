@@ -6,9 +6,9 @@ from files import neural_three_layer as neural
 
 network = neural.Neural(input_size=784,hidden_size=1000,output_size=10)
 
-iters_num = 100000
+iters_num = 10000
 train_size = x_train.shape[0]
-batch_size = 10
+batch_size = 100
 learning_rate = 0.1
 
 for i in range(iters_num):
