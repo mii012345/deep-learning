@@ -1,6 +1,6 @@
 import numpy as np
 from files import mnist
-from files import neural_three_layer as neural
+from files import neural
 
 (x_train,t_train),(x_test,t_test) = mnist.load_mnist(normalize=True,one_hot_label=True)
 
