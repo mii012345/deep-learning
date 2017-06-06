@@ -1,14 +1,14 @@
 import numpy as np
 from files import mnist
-from files import neural
+from files import neural_three_layer as neural
 
 (x_train,t_train),(x_test,t_test) = mnist.load_mnist(normalize=True,one_hot_label=True)
 
-network = neural.Neural(input_size=784,hidden_size=100,output_size=10)
+network = neural.Neural(input_size=784,hidden_size=1000,output_size=10)
 
-iters_num = 10000
+iters_num = 100000
 train_size = x_train.shape[0]
-batch_size = 100
+batch_size = 10
 learning_rate = 0.1
 
 for i in range(iters_num):
@@ -25,5 +25,8 @@ for i in range(iters_num):
 
     y = network.predict(x_batch)
     print("seikai",np.argmax(t_batch[0,:]),"yosoku",np.argmax(y[0,:]))
-    a=network.accuracy(x_train,t_train)
-    print(a)
+
+
+a=network.accuracy(x_train,t_train)
+print(a)
+network.save_params("params.pkl")
