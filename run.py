@@ -18,13 +18,12 @@ for i in range(iters_num):
 
     grad = network.gradient(x_batch,t_batch)
 
-    #print(grad)
-
     for key in ('W1','b1','W2','b2'):
         network.params[key] -= learning_rate * grad[key]
 
     y = network.predict(x_batch)
     print("seikai",np.argmax(t_batch[0,:]),"yosoku",np.argmax(y[0,:]))
+
 
 
 a=network.accuracy(x_train,t_train)
