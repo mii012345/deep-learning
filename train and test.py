@@ -58,3 +58,4 @@ for i in range(200):
     print(i,"seikai",cp.argmax(t_batch[0,:]),"yosoku",cp.argmax(y[0,:]),answer)
 print((ans/200)*100)
 #300,200->47.5
+#350,200->50.5
