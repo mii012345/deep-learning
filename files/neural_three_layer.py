@@ -6,7 +6,6 @@ from . import function as f
 
 class Neural:
     def __init__(self,input_size,hidden_size,output_size,weight_init_std=0.01):
-
         self.params={}
         self.params['W1'] = weight_init_std * np.random.randn(input_size,hidden_size)
         self.params['b1'] = np.zeros(hidden_size)
@@ -76,6 +75,6 @@ class Neural:
     def load_params(self, file_name="params.pkl"):
         with open(file_name,'rb') as f:
             obj = pickle.load(f)
-            for i in [0,1,2]:
+            for i in range(2):
                 self.params['W'+str(i+1)] = obj['W'+str(i+1)]
                 self.params['b'+str(i+1)] = obj['b'+str(i+1)]
