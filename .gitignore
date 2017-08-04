@@ -6,3 +6,8 @@ files/train-images-idx3-ubyte.gz
 files/train-labels-idx1-ubyte.gz
 files/mnist.pkl
 params.pkl
+tenki/
+tenki2/
+test
+data (2).csv
+data (3).csv
