@@ -2,7 +2,6 @@ import cupy as cp
 from files import mnist
 from files import neural_layer as neural
 from files import tenki_num as t
-import matplotlib.pyplot as plt
 import gc
 import chainer.cuda as cuda
 import time
