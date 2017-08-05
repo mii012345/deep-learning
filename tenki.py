@@ -9,15 +9,20 @@ x = input("Please Enter Year You Want: ")
 y = input("And Enter Folder You Save File: ") + "/"
 c=[]
 for ii in range(1,13):
+    if ii < 10:
+        str_a = "0"+str(a)
+    else:
+        str_a = str(a)
     for i in range(1,32):
         if i<10:
-            url="http://weather.is.kochi-u.ac.jp/sat/gms.fareast/"+x+"/0"+str(a)+"/0"+str(i)+"/fe."+x[2:]+"0"+str(a)+"0"+str(i)+"09.jpg"
+            url="http://weather.is.kochi-u.ac.jp/sat/gms.fareast/"+x+"/"+str_a+"/0"+str(i)+"/fe."+x[2:]+"0"+str(a)+"0"+str(i)+"09.jpg"
             title=y+str(b)+".jpg"
         else:
-            url="http://weather.is.kochi-u.ac.jp/sat/gms.fareast/"+x+"/0"+str(a)+"/"+str(i)+"/fe."+x[2:]+"0"+str(a)+str(i)+"09.jpg"
+            url="http://weather.is.kochi-u.ac.jp/sat/gms.fareast/"+x+"/"+str_a+"/"+str(i)+"/fe."+x[2:]+"0"+str(a)+str(i)+"09.jpg"
             title=y+str(b)+".jpg"
         try:
-            urllib.request.urlretrieve(url,title)
+            test = 0
+            #urllib.request.urlretrieve(url,title)
         except:
             if ii == 2:
                 if i == 29:
