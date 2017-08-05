@@ -2,7 +2,7 @@ import csv
 import cupy as np
 import pickle
 
-with open('data (3).csv','r') as f:
+with open('data (4).csv','r') as f:
     csv = csv.reader(f)
     csvlist = []
     for i in csv:
