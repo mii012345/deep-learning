@@ -21,8 +21,7 @@ for ii in range(1,13):
             url="http://weather.is.kochi-u.ac.jp/sat/gms.fareast/"+x+"/"+str_a+"/"+str(i)+"/fe."+x[2:]+str_a+str(i)+"09.jpg"
             title=y+str(b)+".jpg"
         try:
-            test = 0
-            #urllib.request.urlretrieve(url,title)
+            urllib.request.urlretrieve(url,title)
         except:
             if ii == 2:
                 if i == 29:
