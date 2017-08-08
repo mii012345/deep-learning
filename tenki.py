@@ -41,5 +41,13 @@ print("I Was Able To Download Files About "+str(x))
 print("This Is Files I Could Not Download:")
 for i in c:
     print(i)
-with open("fault_save.pkl",'wb') as f:
-    pickle.dump(c,f)
+while True:
+    z = input("Do You Wnat To Save That Result?(y/n):")
+    if z == "y":
+        with open(x,'wb') as f:
+            pickle.dump(c,f)
+        elif z == "n":
+            break
+        else:
+            print("This Is An Illegal String")
+            continue
