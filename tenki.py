@@ -41,3 +41,5 @@ print("I Was Able To Download Files About "+str(x))
 print("This Is Files I Could Not Download:")
 for i in c:
     print(i)
+with open("fault_save.pkl",'wb') as f:
+    pickle.dump(c,f)
